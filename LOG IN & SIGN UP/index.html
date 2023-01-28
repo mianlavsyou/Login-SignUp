@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in & Sign up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="wrapper">
+        <div class="form signup">
+            <header>Sign Up</header>
+            <form action="#">
+                <input type="text" placeholder="Full name">
+                <input type="text" placeholder="Email address">
+                <input type="text" placeholder="Password">
+                <div class="checkbox">
+                    <input type="checkbox" id="signupCheck" >
+                    <label for="signupCheck">I accept all terms & conditions</label>
+                </div>
+                <input type="submit" value="Sign-up">
+            </form>
+        </div>
+
+        <div class="form login">
+            <header>Log In</header>
+            <form action="#">
+                <input type="text" placeholder="Email address">
+                <input type="text" placeholder="Password">
+                <a href="">Forgot password?</a>
+                <input type="submit" value="Log-in">
+            </form>
+        </div>
+
+        <script>
+            const wrapper = document.querySelector("wrapper"),
+            signupHeader = document.querySelector(".signup header"),
+            loginHeader = document.querySelector(".login header");
+
+            loginHeader.addEventListener("click", () =>{
+                wrapper.classList.add("active");
+            });
+            signupHeader.addEventListener("click", () =>{
+                wrapper.classList.remove("active");
+            });
+        </script>
+    </section>
+</body>
+</html>
